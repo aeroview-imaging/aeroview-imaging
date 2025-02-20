@@ -51,29 +51,32 @@
         }
 
         #portfolio {
-            padding: 100px 20px;
+            padding: 120px 20px;
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .portfolio-row {
+            display: flex;
             justify-content: center;
+            flex-wrap: wrap;
             gap: 20px;
-            max-width: 1200px;
-            margin: auto;
-        }            padding: 100px 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            max-width: 1200px;
-            margin: auto;
         }
 
         .portfolio-item {
             position: relative;
             overflow: hidden;
             border-radius: 10px;
+            max-width: 100%;
         }
 
         .portfolio-item img {
             width: 100%;
+            max-width: 500px;
             display: block;
             border-radius: 10px;
             transition: transform 0.3s;
@@ -83,12 +86,15 @@
             transform: scale(1.05);
         }
 
-        .portfolio-item iframe {
-            width: 100%;
-            max-width: 560px;
-            height: 315px;
-            border-radius: 10px;
-        }            width: 100%;
+        .video-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .video-container iframe {
+            width: 560px;
             height: 315px;
             border-radius: 10px;
         }
@@ -116,22 +122,25 @@
 
     <!-- Portfolio Section -->
     <section id="portfolio">
-        <div class="portfolio-item"><img src="images/image1.jpg" alt="Portfolio Image 1"></div>
-        <div class="portfolio-item"><img src="images/image2.jpg" alt="Portfolio Image 2"></div>
-        <div class="portfolio-item"><img src="images/image3.jpg" alt="Portfolio Image 3"></div>
-        <div class="portfolio-item"><img src="images/image4.jpg" alt="Portfolio Image 4"></div>
-        <div class="portfolio-item"><img src="images/image5.jpg" alt="Portfolio Image 5"></div>
-        <div class="portfolio-item"><img src="images/image6.jpg" alt="Portfolio Image 6"></div>
-        <div class="portfolio-item"><img src="images/image7.jpg" alt="Portfolio Image 7"></div>
-        <div class="portfolio-item"><img src="images/image8.jpg" alt="Portfolio Image 8"></div>
-        <div class="portfolio-item"><img src="images/image9.jpg" alt="Portfolio Image 9"></div>
-        <div class="portfolio-item"><img src="images/image10.jpg" alt="Portfolio Image 10"></div>
+        <h1>Our Work</h1>
         
-        <!-- Embedded Videos -->
-        <div class="portfolio-item">
-            <iframe src="https://www.youtube.com/embed/w44qFgR5M24" frameborder="0" allowfullscreen></iframe>
+        <div class="portfolio-row">
+            <div class="portfolio-item"><img src="images/image1.jpg" alt="Portfolio Image 1"></div>
+            <div class="portfolio-item"><img src="images/image2.jpg" alt="Portfolio Image 2"></div>
         </div>
-        <div class="portfolio-item">
+        <div class="portfolio-row">
+            <div class="portfolio-item"><img src="images/image3.jpg" alt="Portfolio Image 3"></div>
+            <div class="portfolio-item"><img src="images/image4.jpg" alt="Portfolio Image 4"></div>
+        </div>
+        <div class="portfolio-row">
+            <div class="portfolio-item"><img src="images/image5.jpg" alt="Portfolio Image 5"></div>
+            <div class="portfolio-item"><img src="images/image6.jpg" alt="Portfolio Image 6"></div>
+        </div>
+
+        <!-- Embedded Videos -->
+        <h2>Featured Videos</h2>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/w44qFgR5M24" frameborder="0" allowfullscreen></iframe>
             <iframe src="https://www.youtube.com/embed/liU5qeNjNRA" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
@@ -147,3 +156,4 @@
     </footer>
 </body>
 </html>
+
